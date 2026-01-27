@@ -5,8 +5,8 @@ import java.util.Scanner;
 class Palindrome {
     public static void main(String[] args) {
 
-        System.out.println("Enter only Valid Number : ");
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter only Valid Number : ");
         int n = sc.nextInt();
 
         int original = n;
