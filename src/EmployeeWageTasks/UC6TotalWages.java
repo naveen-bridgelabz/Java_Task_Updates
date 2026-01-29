@@ -17,6 +17,7 @@ public class UC6TotalWages {
 
             totalWorkingDays++;
 
+            // 0 = Absent, 1 = Part Time, 2 = Full Time
             int empType = (int) (Math.random() * 3);
             int dailyHours = 0;
 
@@ -25,9 +26,10 @@ public class UC6TotalWages {
             } else if (empType == 1) {
                 dailyHours = partTime;
             } else {
-                dailyHours = 0;
+                dailyHours = 0; // Absent
             }
 
+            // Ensure total hours do not exceed maxWorkingHrs
             if (totalWorkingHours + dailyHours > maxWorkingHrs) {
                 dailyHours = maxWorkingHrs - totalWorkingHours;
             }
@@ -45,6 +47,6 @@ public class UC6TotalWages {
 
         System.out.println("Total Working Days  : " + totalWorkingDays);
         System.out.println("Total Working Hours : " + totalWorkingHours);
-        System.out.println("Total Wage          : " + totalWage);
+        System.out.println("Total Wage          : ₹" + totalWage);
     }
 }
